@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeaturesDemo.Pages.Security.LoginPage"
+             Title="Features Demo App">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Keyboard.Email" ></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True"></Entry>
+            <Button x:Name="btnLogin" Text="Login" TextColor="White" BackgroundColor="Teal" Clicked="btnLogin_Clicked"></Button>
+            <Button x:Name="btnCreateAccount" Text="Create Account" TextColor="White" BackgroundColor="Teal" Clicked="btnCreateAccount_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

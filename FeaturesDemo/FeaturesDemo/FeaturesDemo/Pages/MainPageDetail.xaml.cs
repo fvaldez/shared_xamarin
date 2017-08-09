@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace FeaturesDemo.Pages
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MainPageDetail : ContentPage
+    {
+        public MainPageDetail()
+        {
+            InitializeComponent();
+
+            (App.Current as App).ReviewUserSettings();
+
+            lblUserName.Text = "Welcome " + App.CurrentUser.Username;
+        }
+    }
+}

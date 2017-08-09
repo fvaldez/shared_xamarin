@@ -13,6 +13,7 @@ namespace FeaturesDemo.Data
             database = new SQLiteAsyncConnection(dbPath);
 
             database.CreateTableAsync<Models.User>().Wait();
+            database.CreateTableAsync<Models.UserSettings>().Wait();
         }
 
         public Task<T> GetByIDAsync<T>(int id) where T : Models.BaseModel, new()

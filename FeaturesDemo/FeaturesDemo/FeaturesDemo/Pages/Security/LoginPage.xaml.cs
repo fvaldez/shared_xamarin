@@ -20,7 +20,9 @@ namespace FeaturesDemo.Pages.Security
 
             if (App.CurrentUser.ValidateUserLogin())
             {
-                App.Current.MainPage = new MainPage();
+                App.CurrentUserSettings.LoadUserSettingsByUserID(App.CurrentUser.ID);
+                App.SaveAccountSessionInfo(true);
+                App.Current.MainPage = new Pages.MainPage();
             }
 
             else

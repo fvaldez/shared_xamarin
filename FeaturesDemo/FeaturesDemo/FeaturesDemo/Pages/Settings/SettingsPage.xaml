@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeaturesDemo.Pages.Settings.SettingsPage"
+             Title="Settings">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Detail="The location log will be saving your position in the specified interval of time." Text="Location Log"></TextCell>
+                        <SwitchCell x:Name="swcActivateLog" Text="Activate location log">
+                        </SwitchCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                                <Label Text="Interval" 
+                                       HorizontalOptions="StartAndExpand" 
+                                       VerticalOptions="Center"
+                                       BindingContext="{x:Reference swcActivateLog}"
+                                       IsVisible="{Binding On}"></Label>
+                                <Picker x:Name="pckHour"
+                                        BindingContext="{x:Reference swcActivateLog}"
+                                        IsVisible="{Binding On}">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>0</x:String>
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                                <Label Text="h" 
+                                       VerticalOptions="Center"
+                                       BindingContext="{x:Reference swcActivateLog}"
+                                       IsVisible="{Binding On}"></Label>
+                                <Picker x:Name="pckMin" 
+                                        BindingContext="{x:Reference swcActivateLog}"
+                                        IsVisible="{Binding On}">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>5</x:String>
+                                            <x:String>10</x:String>
+                                            <x:String>15</x:String>
+                                            <x:String>20</x:String>
+                                            <x:String>25</x:String>
+                                            <x:String>30</x:String>
+                                            <x:String>35</x:String>
+                                            <x:String>40</x:String>
+                                            <x:String>45</x:String>
+                                            <x:String>50</x:String>
+                                            <x:String>55</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                                <Label Text="m" 
+                                       VerticalOptions="Center"
+                                       BindingContext="{x:Reference swcActivateLog}"
+                                       IsVisible="{Binding On}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection>
+                        <TextCell Detail="If you activate the session validation, your credentials will be saved for a specified amount of time." Text="Session Validation"></TextCell>
+                        <SwitchCell x:Name="swcActivateSession" Text="Activate session validation"></SwitchCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                                <Label Text="Duration" 
+                                       HorizontalOptions="StartAndExpand" 
+                                       VerticalOptions="Center"
+                                       BindingContext="{x:Reference swcActivateSession}"
+                                       IsVisible="{Binding On}"></Label>
+                                <Picker x:Name="pckHourSession"
+                                        BindingContext="{x:Reference swcActivateSession}"
+                                        IsVisible="{Binding On}">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>0</x:String>
+                                            <x:String>1</x:String>
+                                            <x:String>2</x:String>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                            <x:String>5</x:String>
+                                            <x:String>6</x:String>
+                                            <x:String>7</x:String>
+                                            <x:String>8</x:String>
+                                            <x:String>9</x:String>
+                                            <x:String>10</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                                <Label Text="h" 
+                                       VerticalOptions="Center"
+                                       BindingContext="{x:Reference swcActivateSession}"
+                                       IsVisible="{Binding On}"></Label>
+                                <Picker x:Name="pckMinSession" 
+                                        BindingContext="{x:Reference swcActivateSession}"
+                                        IsVisible="{Binding On}">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>5</x:String>
+                                            <x:String>10</x:String>
+                                            <x:String>15</x:String>
+                                            <x:String>20</x:String>
+                                            <x:String>25</x:String>
+                                            <x:String>30</x:String>
+                                            <x:String>35</x:String>
+                                            <x:String>40</x:String>
+                                            <x:String>45</x:String>
+                                            <x:String>50</x:String>
+                                            <x:String>55</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                                <Label Text="m" 
+                                       VerticalOptions="Center"
+                                       BindingContext="{x:Reference swcActivateLog}"
+                                       IsVisible="{Binding On}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Save" 
+                                BackgroundColor="Teal"
+                                TextColor="White"
+                                VerticalOptions="EndAndExpand"
+                                Clicked="Button_Clicked">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

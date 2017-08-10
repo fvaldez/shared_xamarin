@@ -19,8 +19,8 @@ namespace FeaturesDemo.Pages.Settings
             if (App.CurrentUserSettings.UserID == App.CurrentUser.ID)
             {
                 swcActivateLog.On = App.CurrentUserSettings.LocationLog;
-                pckHour.SelectedItem = App.CurrentUserSettings.Interval.Hours.ToString();
-                pckMin.SelectedItem = App.CurrentUserSettings.Interval.Minutes.ToString();
+                pckHour.SelectedItem = App.CurrentUserSettings.LocationInterval.Hours.ToString();
+                pckMin.SelectedItem = App.CurrentUserSettings.LocationInterval.Minutes.ToString();
 
                 swcActivateSession.On = App.CurrentUserSettings.SessionValidation;
                 pckHourSession.SelectedItem = App.CurrentUserSettings.SessionDuration.Hours.ToString();
@@ -45,7 +45,7 @@ namespace FeaturesDemo.Pages.Settings
             App.CurrentUserSettings.UserID = App.CurrentUser.ID;
             App.CurrentUserSettings.LocationLog = swcActivateLog.On;
             App.CurrentUserSettings.SessionValidation = swcActivateSession.On;
-            App.CurrentUserSettings.Interval = new TimeSpan(Convert.ToInt32(pckHour.SelectedItem), Convert.ToInt32(pckMin.SelectedItem), 0);
+            App.CurrentUserSettings.LocationInterval = new TimeSpan(Convert.ToInt32(pckHour.SelectedItem), Convert.ToInt32(pckMin.SelectedItem), 0);
             App.CurrentUserSettings.SessionDuration = new TimeSpan(Convert.ToInt32(pckHourSession.SelectedItem), Convert.ToInt32(pckMinSession.SelectedItem), 0);
 
             if (App.CurrentUserSettings.SaveUserSettings())

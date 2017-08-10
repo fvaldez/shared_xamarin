@@ -12,7 +12,7 @@ namespace FeaturesDemo.Data.Extensions
             {
                 userSettings.ID = settings.ID;
                 userSettings.LocationLog = settings.LocationLog;
-                userSettings.Interval = settings.Interval;
+                userSettings.LocationInterval = settings.LocationInterval;
                 userSettings.UserID = settings.UserID;
                 userSettings.SessionValidation = settings.SessionValidation;
                 userSettings.SessionDuration = settings.SessionDuration;
@@ -31,7 +31,7 @@ namespace FeaturesDemo.Data.Extensions
             {
                 userSettings.ID = settings.ID;
                 userSettings.LocationLog = settings.LocationLog;
-                userSettings.Interval = settings.Interval;
+                userSettings.LocationInterval = settings.LocationInterval;
                 userSettings.UserID = settings.UserID;
                 userSettings.SessionValidation = settings.SessionValidation;
                 userSettings.SessionDuration = settings.SessionDuration;

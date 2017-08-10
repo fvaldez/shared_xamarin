@@ -94,7 +94,15 @@ namespace FeaturesDemo
         {
             if (CurrentUserSettings.LocationLog)
             {
-                
+                MessagingCenter
+                    .Send<Messages.LocationServiceMessage>(
+                        new Messages.LocationServiceMessage()
+                        {
+                            Action = Messages.LocationServiceAction.Start,
+                            Settings = CurrentUserSettings
+
+                        },
+                        "AppLocationServiceMessage");
             }
         }
 

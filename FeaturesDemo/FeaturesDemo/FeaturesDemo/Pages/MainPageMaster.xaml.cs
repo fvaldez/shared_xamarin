@@ -35,7 +35,7 @@ namespace FeaturesDemo.Pages
                 {
                     new MainPageMenuItem { Id = 0, Title = "Page 1" },
                     new MainPageMenuItem { Id = 1, Title = "Page 2" },
-                    new MainPageMenuItem { Id = 2, Title = "Page 3" },
+                    new MainPageMenuItem { Id = 3, Title = "Location", TargetType= typeof(Location.GetLocationPage) },
                     new MainPageMenuItem { Id = 4, Title = "Settings", TargetType= typeof(Settings.SettingsPage) },
                 });
             }

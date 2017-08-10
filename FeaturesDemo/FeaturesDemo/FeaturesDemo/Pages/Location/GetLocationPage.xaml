@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeaturesDemo.Pages.Location.GetLocationPage">
+    <StackLayout HorizontalOptions="CenterAndExpand" Padding="20">
+        <ListView x:Name="lvwLocations" 
+                  HasUnevenRows="True" 
+                  IsPullToRefreshEnabled="True" 
+                  Refreshing="lvwLocations_Refreshing" 
+                  ItemTapped="lvwLocations_ItemTapped" 
+                  ItemSelected="lvwLocations_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding Time}" TextColor="Black" FontSize="Large"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Latitude}" TextColor="LightGray"></Label>
+                                <Label Text="{Binding Longitude}" TextColor="LightGray"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

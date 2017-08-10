@@ -14,6 +14,7 @@ namespace FeaturesDemo.Data
 
             database.CreateTableAsync<Models.User>().Wait();
             database.CreateTableAsync<Models.UserSettings>().Wait();
+            database.CreateTableAsync<Models.Location>().Wait();
         }
 
         public Task<T> GetByIDAsync<T>(int id) where T : Models.BaseModel, new()

@@ -20,12 +20,12 @@ namespace FeaturesDemo.Models
             set { locationLog = value; }
         }
 
-        private TimeSpan interval;
+        private TimeSpan locationInterval;
 
-        public TimeSpan Interval
+        public TimeSpan LocationInterval
         {
-            get { return interval; }
-            set { interval = value; }
+            get { return locationInterval; }
+            set { locationInterval = value; }
         }
 
         private bool sessionValidation;
